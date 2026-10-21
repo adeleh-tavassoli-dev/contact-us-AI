@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: #c8e8e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 950px;
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Left Side Section */
+.left-side {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-right: 20px;
+}
+
+/* Responsive vertical divider line using relative CSS */
+.left-side::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80%;
+  width: 2px;
+  background: #e0e0e0;
+}
+
+.details {
+  margin: 14px 0;
+  text-align: center;
+}
+
+.details .icon {
+  font-size: 26px;
+  color: #3e2093;
+}
+
+.details .topic {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 5px;
+  color: #333;
+}
+
+.text-one,
+.text-two {
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+
+.text-one a,
+.text-two a {
+  color: #707070;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.text-one a:hover,
+.text-two a:hover {
+  color: #3e2093;
+  text-decoration: underline;
+}
+
+/* Right Side Section */
+.right-side {
+  width: 60%;
+}
+
+.topic-text {
+  font-size: 28px;
+  font-weight: 600;
+  color: #3e2093;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+.input-box {
+  height: 48px;
+  width: 100%;
+  margin: 15px 0;
+}
+
+input,
+textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #f0f1f8;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px 15px;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3e2093;
+  background: #fff;
+}
+
+.message-box {
+  min-height: 120px;
+}
+
+.message-box textarea {
+  height: 100%;
+  resize: vertical;
+}
+
+/* Form Submit Button */
+.button button {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  background: #3e2093;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button button:hover {
+  background: #5029bc;
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 25px;
+  }
+
+  .content {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .left-side {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-right: 0;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+  }
+
+  .left-side::after {
+    display: none;
+  }
+
+  .right-side {
+    width: 100%;
+  }
+}
